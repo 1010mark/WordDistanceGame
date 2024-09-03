@@ -6,9 +6,9 @@ document.getElementById('response-form').addEventListener('submit', function(e) 
     xhr.onload = function() {
         if (xhr.status >= 200 && xhr.status < 300) {
             var score = xhr.responseText.trim();
-            document.getElementById('last-response').textContent = answerText;
+            document.getElementById('last-answer').textContent = answerText;
             document.getElementById('score').textContent = score;
-            document.getElementById('response').value = '';
+            document.getElementById('answer').value = '';
         } else {
             alert('通信に失敗しました。');
         }
