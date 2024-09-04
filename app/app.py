@@ -19,7 +19,7 @@ def play():
 def score():
     # クエリパラメータ 'answer' を取得
     answer = request.args.get('answer', '')
-    target_word="summer"
+    target_word="夏"
     
     
     # UTF-8に変換（FlaskはデフォルトでUTF-8を使用するため特別な変換は不要）
