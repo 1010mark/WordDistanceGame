@@ -37,7 +37,7 @@ def score():
     
     # 点数として、例えば文字数を返す（デモ用）
         similarity = np.dot(answer_vector, target_vector) / (np.linalg.norm(answer_vector) * np.linalg.norm(target_vector))
-        score = max(0, 100 - int(similarity * 100))
+        score = max(0, 10000 - int(similarity * 10000))
     
     # プレーンテキストで返す
         return f'{score}点', 200, {'Content-Type': 'text/plain; charset=utf-8'}
