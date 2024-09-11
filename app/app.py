@@ -1,14 +1,15 @@
 from flask import Flask,render_template,request
 from gensim.models import KeyedVectors
 import numpy as np
-
+import os
 
 
 
 app = Flask(__name__)
 
-model_path = 'path/to/GoogleNews-vectors-negative300.bin'
-model = KeyedVectors.load_word2vec_format(model_path, binary=True)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, 'chive-1.2-mc90', 'chive-1.2-mc90.txt')
+model = KeyedVectors.load_word2vec_format(model_path, binary=False)
 
 
 
