@@ -1,10 +1,171 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="ja">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-    </head>
-    <body>
-        <h1>Index</h1>
-        <p>Index page</p>
-    </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>離れた単語を探すゲーム</title>
+    <style>
+        .rules-section {
+            background-color: #f39672;
+            padding: 20px;
+        }
+    
+        .scroll-hint {
+            font-size: 14px;
+            color: #666;
+            margin: 20px 0;
+        }
+    
+        .points {
+            font-size: 2em; /* Larger text size */
+            color: #fff;
+        }
+    
+        /* Media Queries */
+        @media (max-width: 575.98px) {
+            /* Mobile styles */
+            .rules-section {
+                padding: 10px;
+            }
+    
+            .scroll-hint {
+                font-size: 12px;
+                margin: 10px 0;
+            }
+    
+            .points {
+                font-size: 1.5em; /* Slightly smaller text size for mobile */
+            }
+    
+            .instructions img {
+                width: 100%; /* Make images responsive */
+                height: auto;
+            }
+    
+            .header h1 {
+                font-size: 1.8em; /* Reduce heading size */
+            }
+    
+            .btn {
+                font-size: 1em;
+                padding: 0.5em 1em;
+            }
+        }
+    
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            /* Tablet styles */
+            .points {
+                font-size: 1.8em; /* Slightly smaller text size */
+            }
+    
+            .instructions img {
+                width: 100%; /* Responsive images */
+                height: auto;
+            }
+    
+            .header h1 {
+                font-size: 2em; /* Slightly smaller heading */
+            }
+    
+            .btn {
+                font-size: 1.2em;
+                padding: 0.6em 1.2em;
+            }
+        }
+    
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            /* Larger tablets and small desktops */
+            .points {
+                font-size: 1.9em; /* Medium text size */
+            }
+    
+            .instructions img {
+                width: 90%;
+                height: auto;
+            }
+    
+            .header h1 {
+                font-size: 2.5em; /* Slightly smaller heading */
+            }
+    
+            .btn {
+                font-size: 1.3em;
+                padding: 0.7em 1.4em;
+            }
+        }
+    
+        @media (min-width: 992px) {
+            /* Desktops */
+            .points {
+                font-size: 2em; /* Default size */
+            }
+    
+            .instructions img {
+                width: 80%;
+                height: auto;
+            }
+    
+            .header h1 {
+                font-size: 3em; /* Default heading size */
+            }
+    
+            .btn {
+                font-size: 1.5em;
+                padding: 0.8em 1.6em;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container text-center my-4">
+        <div class="header py-3 border-bottom">
+            <h1>離れた単語を探すゲーム</h1>
+        </div>
+        
+        <!-- スクロールヒント -->
+        <div class="scroll-hint">↓ ルール説明↓</div>
+
+        <!-- ルールセクション -->
+        <div class="rules-section mt-4">
+            <div class="row">
+                <!-- 画像を左側に配置 -->
+                <div class="col-md-6">
+                    <img src="/static/image/relation.png" alt="単語ゲームの画像" class="img-fluid mb-4">
+                </div>
+                <!-- テキストを右側に配置 -->
+                <div class="col-md-6">
+                    <!-- ポイント表示 -->
+                    <div class="points mb-3 fw-bold">
+                        <p>「犬」と「国会議事堂」 = 9,999pt!?</p>
+                    </div>
+                    <!-- 説明文 -->
+                    <div class="instructions mb-4">
+                        <p>
+                            ある任意のお題に対して関連性が遠ければ遠いほど高得点が得られる逆連想ゲーム！！
+                            <br>君の奇想天外さで勝利を掴み取れ！
+                        </p>
+                        <img src="/static/image/battle-scene.png" alt="単語ゲームの画像">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ボタンを中央4マス分の位置に配置 -->
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <a href="/play" class="btn btn-outline-secondary btn-lg px-2 py-1">play</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScriptとその依存関係を読み込み -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
+
