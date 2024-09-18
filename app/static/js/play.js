@@ -1,4 +1,5 @@
 document.getElementById('response-form').addEventListener('submit', function(e) {
+    console.log("submit...")
     e.preventDefault();
     let answerText = document.getElementById('answer').value;
     let xhr = new XMLHttpRequest();
