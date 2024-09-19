@@ -46,9 +46,3 @@ def score():
     except KeyError as e:
         return '単語がモデルに存在しません', 400, {'Content-Type': 'text/plain; charset=utf-8'}
 
-
-
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
