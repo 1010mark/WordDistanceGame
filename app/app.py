@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(current_dir, 'chive-1.2-mc90', 'chive-1.2-mc90.txt')
+model_path = os.path.join(current_dir, 'chive-1.3-mc90', 'chive-1.3-mc90.txt')
 model = KeyedVectors.load_word2vec_format(model_path, binary=False)
 
 
