@@ -44,4 +44,4 @@ def score():
         return f'{score}点', 200, {'Content-Type': 'text/plain; charset=utf-8'}
     
     except KeyError as e:
-        return '単語がモデルに存在しません', 400, {'Content-Type': 'text/plain; charset=utf-8'}
+        return '単語がモデルに存在しません', 200, {'Content-Type': 'text/plain; charset=utf-8'}
